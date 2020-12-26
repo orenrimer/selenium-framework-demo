@@ -1,0 +1,41 @@
+26/12/2020 14:34:51 :: __init__ :: INFO :: Found element:: ('xpath', "//span[contains(@class, 'AccountIcon-icon')]")
+26/12/2020 14:34:51 :: __init__ :: INFO :: Clicked on element:: ('xpath', "//span[contains(@class, 'AccountIcon-icon')]")
+26/12/2020 14:34:51 :: __init__ :: INFO :: Found element:: ('id', 'Login-email')
+26/12/2020 14:34:51 :: __init__ :: INFO :: Cleared element:: 
+26/12/2020 14:34:52 :: __init__ :: INFO :: Typed test_email@gmail.com in element:: ('id', 'Login-email')
+26/12/2020 14:34:52 :: __init__ :: INFO :: Found element:: ('id', 'Login-password')
+26/12/2020 14:34:52 :: __init__ :: INFO :: Cleared element:: 
+26/12/2020 14:34:52 :: __init__ :: INFO :: Typed 9xN9#w70PS$$ in element:: ('id', 'Login-password')
+26/12/2020 14:34:52 :: __init__ :: INFO :: Found element:: ('xpath', "//button[contains(text(),'Sign in')]")
+26/12/2020 14:34:52 :: __init__ :: INFO :: Clicked on element:: ('xpath', "//button[contains(text(),'Sign in')]")
+26/12/2020 14:34:52 :: __init__ :: INFO :: Got page url:: https://www.topman.com/login
+26/12/2020 14:34:54 :: __init__ :: INFO :: Found element:: ('id', 'searchTermInput')
+26/12/2020 14:34:54 :: __init__ :: INFO :: Cleared element:: 
+26/12/2020 14:34:54 :: __init__ :: INFO :: Typed jeans in element:: ('id', 'searchTermInput')
+26/12/2020 14:34:54 :: __init__ :: INFO :: Found element:: ('xpath', "//button[@class='SearchBar-button'][1]")
+26/12/2020 14:34:54 :: __init__ :: INFO :: Clicked on element:: ('xpath', "//button[@class='SearchBar-button'][1]")
+26/12/2020 14:34:54 :: __init__ :: INFO :: Found element:: ('xpath', "//span[@class='PlpHeader-title']")
+26/12/2020 14:34:54 :: __init__ :: INFO :: Got text from element:: ('xpath', "//span[@class='PlpHeader-title']")
+26/12/2020 14:34:56 :: __init__ :: INFO :: Found elements:: ('xpath', "//a[@class='Product-nameLink']")
+26/12/2020 14:34:57 :: __init__ :: INFO :: Found elements:: ('xpath', "//select[@id='productSizes']/option")
+26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
+26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
+26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
+26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
+26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
+26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
+26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
+26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
+26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
+26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
+26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
+26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
+26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
+26/12/2020 14:34:57 :: __init__ :: INFO :: Found element:: ('xpath', "//div[contains(@class,'ProductDetail-secondaryButtonGroup')]//div//button")
+26/12/2020 14:34:57 :: __init__ :: INFO :: Clicked on element:: ('xpath', "//div[contains(@class,'ProductDetail-secondaryButtonGroup')]//div//button")
+26/12/2020 14:34:57 :: __init__ :: INFO :: Found element:: ('xpath', "//div[@class ='MiniBag']")
+26/12/2020 14:34:57 :: __init__ :: INFO :: Found element:: ('xpath', "//button[contains(@class, 'ShoppingCart')]")
+26/12/2020 14:34:57 :: __init__ :: INFO :: Clicked on element:: ('xpath', "//button[contains(@class, 'ShoppingCart')]")
+26/12/2020 14:34:57 :: __init__ :: INFO :: Found element:: ('xpath', "//button[@class='Button MiniBag-continueButton notranslate'][1]")
+26/12/2020 14:34:58 :: __init__ :: INFO :: Clicked on element:: ('xpath', "//button[@class='Button MiniBag-continueButton notranslate'][1]")
+26/12/2020 14:34:59 :: __init__ :: INFO :: Found element:: ('css selector', '.DeliveryOption--home')
