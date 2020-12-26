@@ -1,3 +1,5 @@
+26/12/2020 14:34:45 :: __init__ :: INFO :: Opened Chrome window
+26/12/2020 14:34:45 :: __init__ :: INFO :: Go to URL:: https://www.topman.com/
 26/12/2020 14:34:51 :: __init__ :: INFO :: Found element:: ('xpath', "//span[contains(@class, 'AccountIcon-icon')]")
 26/12/2020 14:34:51 :: __init__ :: INFO :: Clicked on element:: ('xpath', "//span[contains(@class, 'AccountIcon-icon')]")
 26/12/2020 14:34:51 :: __init__ :: INFO :: Found element:: ('id', 'Login-email')
