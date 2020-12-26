@@ -24,15 +24,6 @@
 26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
 26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
 26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
-26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
-26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
-26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
-26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
-26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
-26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
-26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
-26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
-26/12/2020 14:34:57 :: __init__ :: INFO :: Got attribute from element:: 
 26/12/2020 14:34:57 :: __init__ :: INFO :: Found element:: ('xpath', "//div[contains(@class,'ProductDetail-secondaryButtonGroup')]//div//button")
 26/12/2020 14:34:57 :: __init__ :: INFO :: Clicked on element:: ('xpath', "//div[contains(@class,'ProductDetail-secondaryButtonGroup')]//div//button")
 26/12/2020 14:34:57 :: __init__ :: INFO :: Found element:: ('xpath', "//div[@class ='MiniBag']")
