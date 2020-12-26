@@ -1,12 +1,11 @@
 import json
 import os
-
 import pytest
 from selenium.webdriver import Chrome, Firefox, ChromeOptions
-
 from pages.cart_page import CartPage
 from pages.login_page import LoginPage
 from utilities.custom_logger import custom_logger
+
 
 logger = custom_logger()
 
