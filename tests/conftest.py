@@ -8,6 +8,7 @@ from utilities.custom_logger import custom_logger
 
 
 logger = custom_logger()
+BASE_URL = "https://www.topman.com/"
 
 
 @pytest.fixture(scope='session')
@@ -31,12 +32,10 @@ def driver_setup(config):
         logger.info("Opened Firefox window")
     else:
         raise Exception(f"Unsupported browser, can't open {browser}")
-
-    base_url = config['BASE_URL']
-    logger.info("Go to URL:: " + str(base_url))
+        
     driver.maximize_window()
-    driver.maximize_window()
-    driver.get(base_url)
+    driver.get(BASE_URL)
+    logger.info(f"Go to URL:: {BASE_URL}")
     driver.implicitly_wait(config['WAIT_TIME'])
     yield driver
     login_page = LoginPage(driver)
