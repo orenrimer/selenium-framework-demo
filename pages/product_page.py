@@ -1,11 +1,10 @@
 import random
-
 from selenium.webdriver.common.by import By
-
 from pages.base_page import BasePage
 
 
 class ProductPage(BasePage):
+    
     # locators
     PRODUCT_TITLE = (By.XPATH, "//h1[contains(@class,'ProductDetail-title')]")
     AVAILABLE_SIZES = (By.CLASS_NAME, 'ProductSizes-item')
@@ -14,6 +13,7 @@ class ProductPage(BasePage):
     WISHLIST_BTN = (By.XPATH, "//button[@class='WishlistButton notranslate WishlistButton--pdp']")
     ADD_TO_BAG_BTN = (By.XPATH, "//div[contains(@class,'ProductDetail-secondaryButtonGroup')]//div//button")
 
+    
     def __init__(self, driver):
         super().__init__(driver)
 
