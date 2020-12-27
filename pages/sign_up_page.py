@@ -1,5 +1,4 @@
 from selenium.webdriver.common.by import By
-
 from pages.base_page import BasePage
 from utilities import generic_utils
 
@@ -11,6 +10,7 @@ class SignUpPage(BasePage):
     PASSWORD_FIELD = (By.ID, "Register-password")
     JOIN_BTN = (By.XPATH, "//button[contains(text(),'CREATE AN ACCOUNT')]")
 
+    
     def __init__(self, driver):
         super().__init__(driver)
 
