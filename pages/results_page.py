@@ -1,11 +1,10 @@
 import random
-
 from selenium.webdriver.common.by import By
-
 from pages.base_page import BasePage
 
 
 class ResultsPage(BasePage):
+    
     # locators
     PRODUCTS_LINK = (By.XPATH, "//a[@class='Product-nameLink']")
     SORT_SELECT = (By.ID, 'sortSelector')
