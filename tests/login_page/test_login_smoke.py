@@ -21,7 +21,6 @@ class TestLogin:
         if AssertionError:
             self.login_page.driver.take_screenshot(name="test_login_invalid_email")
      
-
     @pytest.mark.order(2)
     @pytest.mark.tcid3
     def test_login_invalid_password(self, setup):
@@ -30,7 +29,6 @@ class TestLogin:
         assert self.login_page.verify_login_failed()
         if AssertionError:
             self.login_page.driver.take_screenshot(name="test_login_invalid_password")       
-            
             
     @pytest.mark.order(3)
     @pytest.mark.tcid4
