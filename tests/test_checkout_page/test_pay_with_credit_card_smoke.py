@@ -11,7 +11,7 @@ from pages.product_page import ProductPage
 from pages.results_page import ResultsPage
 from utilities.read_data import getCSVData
 
-pytestmark = [pytest.mark.smoke, pytest.mark.checkout, pytest.mark.deliverypage]
+pytestmark = [pytest.mark.smoke, pytest.mark.checkout]
 
 
 class TestPayWithCreditCard:
