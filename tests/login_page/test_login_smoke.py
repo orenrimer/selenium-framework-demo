@@ -13,7 +13,7 @@ class TestLogin:
         self.login_page.goto()
         
     @pytest.mark.order(1)
-    @pytest.mark.tcid3
+    @pytest.mark.tcid2
     def test_login_invalid_email(self, setup):
         email = generate_random_email()
         self.login_page.login(email=email)
@@ -23,7 +23,7 @@ class TestLogin:
      
 
     @pytest.mark.order(2)
-    @pytest.mark.tcid4
+    @pytest.mark.tcid3
     def test_login_invalid_password(self, setup):
         password = generate_random_password()
         self.login_page.login(password=password)
@@ -33,7 +33,7 @@ class TestLogin:
             
             
     @pytest.mark.order(3)
-    @pytest.mark.tcid2
+    @pytest.mark.tcid4
     def test_login_valid_user(self, setup):
         self.login_page.login()
         assert self.login_page.verify_logged_in()
