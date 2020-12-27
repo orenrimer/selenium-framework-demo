@@ -31,7 +31,7 @@ class TestPayWithCreditCard:
 
 
     @pytest.fixture(scope="class")
-    def preconditions(self, setup):
+    def prerequisites(self, setup):
         self.login_page.goto()
         self.login_page.login()
         self.results_page.goto_product(self.product)
