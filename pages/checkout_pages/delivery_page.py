@@ -78,12 +78,12 @@ class DeliveryPage(BasePage):
         self.enter_last_name(last_name)
         
         self.enter_phone_number(phone)
-        self.enter_postcode(postcode)
+        self.select_delivery_country(delivery_country)
+        self.driver.element_click(self.MANUALLY_ENTER_ADDRESS_BTN)
 
         address, city = full_address.split(',')
-        self.driver.element_click(self.MANUALLY_ENTER_ADDRESS_BTN)
         self.driver.element_send_keys(data=address, locator=self.ADDRESS_FIELD)
-        self.select_delivery_country(delivery_country)
+        self.enter_postcode(postcode)
         self.driver.element_send_keys(data=city, locator=self.CITY_FIELD)
 
 
