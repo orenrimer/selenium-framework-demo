@@ -154,19 +154,6 @@ class CustomDriver:
         except Exception as e:
             self.logger.error(f"Couldn't wait for page url to change:: error {e}")
 
-    def wait_for_invisibility_of_element(self, locator='', element=None, wait_time=20, poll_freq=0.5):
-        try:
-            wait = WebDriverWait(self.driver, timeout=wait_time, poll_frequency=poll_freq, ignored_exceptions=[
-                NoSuchElementException,
-                ElementNotVisibleException,
-                ElementNotSelectableException,
-            ])
-            if locator:
-                element = self.get_element(locator=locator)
-            wait.until(EC.invisibility_of_element(element))
-        except Exception as e:
-            self.logger.error(f"Element doesn't exist in page:: error {e}")
-
     def switch_frame(self, index="", name="", frame_id=None):
         try:
             if index:
