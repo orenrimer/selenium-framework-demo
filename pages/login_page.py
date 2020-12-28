@@ -30,7 +30,6 @@ class LoginPage(BasePage):
         self.enter_email(email)
         self.enter_password(password)
         self.driver.element_click(self.LOGIN_BTN)
-        self.driver.wait_for_url()
 
     def verify_logged_in(self):
         return self.driver.is_element_present(self.header.SIGN_OUT_LINK)
