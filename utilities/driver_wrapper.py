@@ -146,14 +146,6 @@ class CustomDriver:
         except ElementNotInteractableException:
             self.logger.error(f"Element doesn't exist in page :: {locator}")
 
-    def wait_for_url(self, wait_time=20, poll_freq=0.5):
-        try:
-            wait = WebDriverWait(self.driver, timeout=wait_time, poll_frequency=poll_freq)
-            current_url = self.get_url()
-            wait.until(EC.url_changes(current_url))
-        except Exception as e:
-            self.logger.error(f"Couldn't wait for page url to change:: error {e}")
-
     def get_title(self):
         try:
             title = self.driver.title
