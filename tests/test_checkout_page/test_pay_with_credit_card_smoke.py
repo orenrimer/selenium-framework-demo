@@ -11,9 +11,11 @@ from pages.product_page import ProductPage
 from pages.results_page import ResultsPage
 from utilities.read_data import getCSVData
 
+
+
 pytestmark = [pytest.mark.smoke, pytest.mark.checkout]
 
-
+@ddt
 class TestPayWithCreditCard:
 
     root = os.path.dirname(os.path.dirname(__file__))
