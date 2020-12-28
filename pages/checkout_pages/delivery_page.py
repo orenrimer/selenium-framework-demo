@@ -102,7 +102,6 @@ class DeliveryPage(BasePage):
         self.choose_delivery_type(delivery_type)
         self.driver.scroll(self.PROCEED_BTN)
         self.driver.element_click(self.PROCEED_BTN)
-        self.driver.wait_for_url()
 
     def verify_valid_delivery_details(self):
         return self.verify_page_title_contains('Billing Options')
