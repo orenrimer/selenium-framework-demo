@@ -40,7 +40,7 @@ class TestProductPage:
             self.login_page.driver.take_screenshot(name="test_add_product_to_wishlist_as_user")
 
     @pytest.mark.tcid17
-    def test_add_product_to_wishlist_as_user(self, setup):
+    def test_add_product_to_cart_as_guest(self, setup):
         self.results_page.goto_product(self.product)
         self.product_page.add_to_bag(select_type="dropdown")
         assert self.product_page.verify_added_to_bag()
