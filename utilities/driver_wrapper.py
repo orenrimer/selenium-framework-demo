@@ -49,12 +49,21 @@ class CustomDriver:
         try:
             if locator:
                 element = self.get_element(locator)
-            element.click()
-            if locator:
-                self.logger.info(f"Clicked on element:: {locator}")
+
+            max_tries = 3
+            try_num = 0
+            while try_num < max_tries:
+                try:
+                    element.click()
+                    self.logger.info(f"Clicked on element:: {locator}")
+                    break
+                except Exception as e:
+                    try_num += 1
+            else:
+                raise Exception(f"cant click on elements:: {locator} after {max_tries} tries")
         except ElementNotInteractableException:
             self.logger.error(f"Can't click on element:: {locator}")
-
+            
     def element_clear(self, locator="", element=None):
         try:
             if locator:
