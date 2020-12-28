@@ -52,9 +52,7 @@ class ProductPage(BasePage):
     def add_to_bag(self, size=None, color=None, select_type=None):
         self.select_available_size(size=size, select_type=select_type)
         self.click_add_to_bag()
-        CART_SLIDER = (By.XPATH, "//div[@class ='MiniBag']")
-        self.driver.wait_for_invisibility_of_element(locator=CART_SLIDER)
-
+     
     def get_product_title(self):
         return self.driver.element_get_text(self.PRODUCT_TITLE)
 
