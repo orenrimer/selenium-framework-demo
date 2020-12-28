@@ -1,8 +1,7 @@
 import datetime
-
 from selenium.webdriver.common.by import By
-
 from pages.base_page import BasePage
+
 
 
 class PaymentPage(BasePage):
@@ -78,7 +77,6 @@ class PaymentPage(BasePage):
         if payment_options == "card" or payment_options == 'account card':
             self.fill_card_details(curd_num, expiry_date, cvv)
         self.driver.element_click(self.PAY_BTN)
-        self.driver.wait_for_url()
 
     def verify_successful_payment(self):
         return self.verify_page_title_contains('Thank You')
