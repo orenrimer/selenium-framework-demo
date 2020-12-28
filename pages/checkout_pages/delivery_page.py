@@ -71,7 +71,7 @@ class DeliveryPage(BasePage):
             raise Exception(f"Invalid parameter 'delivery_option':: {delivery_option} ")
 
 
-    def enter_delivery_address(self, phone, delivery_country, postcode, full_address, first_name=None, last_name=None):
+    def enter_delivery_address(self, phone, postcode, full_address, delivery_country=None, first_name=None, last_name=None):
         if not first_name: first_name = generic_utils.generate_random_string()
         self.enter_first_name(first_name)
         if not last_name: last_name = generic_utils.generate_random_string()
