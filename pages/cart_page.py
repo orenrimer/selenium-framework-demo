@@ -28,7 +28,6 @@ class CartPage(BasePage):
         CONFIRM_BTN = (By.XPATH, "//button[@class='Button OrderProducts-deleteButton']")
         self.driver.element_click(self.REMOVE_ITEM_BTNS)
         self.driver.element_click(CONFIRM_BTN)
-        self.driver.wait_for_invisibility_of_element((By.XPATH, "//div[@class='LoaderOverlay is-shown ']"))
 
     def clear_cart(self):
         items = self.driver.get_elements_list(self.REMOVE_ITEM_BTNS)
