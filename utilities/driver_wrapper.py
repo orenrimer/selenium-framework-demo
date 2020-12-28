@@ -169,7 +169,3 @@ class CustomDriver:
             return url
         except Exception as e:
             self.logger.error(f"Can't get page url:: error {e}")
-
-    def execute_script(self, script):
-        self.driver.execute_script(script)
-        self.logger.info(f"Executing JavaScript:: {script}")
