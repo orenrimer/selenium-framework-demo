@@ -154,39 +154,6 @@ class CustomDriver:
         except Exception as e:
             self.logger.error(f"Couldn't wait for page url to change:: error {e}")
 
-    def switch_frame(self, index="", name="", frame_id=None):
-        try:
-            if index:
-                self.driver.switch_to.frame(index)
-                self.logger.info(f"Switched to frame :: number {index} ")
-            if name:
-                self.driver.switch_to.frame(name)
-                self.logger.info(f"Switched to frame :: name {name}")
-            if frame_id is not None:
-                self.driver.frame(frame_id)
-                self.logger.info(f"Switched to frame :: id {id}")
-        except Exception as e:
-            self.logger.error(f"Can't switch to frame:: error {e}")
-
-    def switch_default_content(self):
-        try:
-            self.driver.switch_to.default_content()
-            self.logger.info("Switched back to default content")
-        except Exception as e:
-            self.logger.error(f"Can't switch back to default content:: error {e}")
-
-    def scroll(self, locator="", element=None):
-        try:
-            if locator:
-                element = self.get_element(locator)
-            if element is None:
-                self.driver.execute_script(
-                    "arguments[0].scrollIntoView(true);", element)
-                self.driver.execute_script("window.scrollBy(0, -150);")
-                self.logger.info("Scrolled element into view")
-        except Exception as e:
-            self.logger.error(f"Can't scroll element into view:: error {e}")
-
     def get_title(self):
         try:
             title = self.driver.title
@@ -202,27 +169,6 @@ class CustomDriver:
             return url
         except Exception as e:
             self.logger.error(f"Can't get page url:: error {e}")
-
-    def refresh_page(self):
-        try:
-            self.driver.refresh()
-            self.logger.info("Refreshed page")
-        except Exception as e:
-            self.logger.error(f"Can't refresh page:: error{e}")
-
-    def navigate_previous_window(self):
-        try:
-            self.driver.execute_script("window.history.go(-1);")
-            self.logger.info("Navigated to previous window")
-        except Exception as e:
-            self.logger.error(f"Can't navigate to previous window :: error {e}")
-
-    def navigate_next_window(self):
-        try:
-            self.driver.execute_script("window.history.go(1);")
-            self.logger.info("Navigated to next window")
-        except Exception as e:
-            self.logger.error(f"Can't navigate to next window:: error {e}")
 
     def execute_script(self, script, element=None):
         if element:
