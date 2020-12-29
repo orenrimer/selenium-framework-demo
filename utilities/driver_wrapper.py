@@ -60,7 +60,7 @@ class CustomDriver:
                 except Exception as e:
                     try_num += 1
             else:
-                raise Exception(f"cant click on elements:: {locator} after {max_tries} tries")
+                raise Exception(f"failed to click on elements:: {locator} after {max_tries} tries")
         except ElementNotInteractableException:
             self.logger.error(f"Can't click on element:: {locator}")
             
