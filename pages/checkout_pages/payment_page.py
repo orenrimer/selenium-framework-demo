@@ -3,7 +3,6 @@ from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 
 
-
 class PaymentPage(BasePage):
 
     # locators
@@ -50,14 +49,16 @@ class PaymentPage(BasePage):
         self.driver.element_send_keys(cvv, self.CVV_FIELD)
 
     def select_card_exp_date(self, expiry_date):
-        expiry_month = expiry_date[:3]
+        expiry_month, expiry_year = int(expiry_date.split('/'))
+        expiry_month = int(expiry_month)
+        expiry_year = int(expiry_year)
+        
         if 1 <= expiry_month <= 12:
             select_exp_month = self.driver.element_select(self.SELECT_EXPIRY_MONTH)
             select_exp_month.select_by_index(expiry_month-1)
         else:
             raise Exception(f"Invalid parameter 'expiry_month':: {str(expiry_month)}, must be an integer between 1 and 12.")
 
-        expiry_year = expiry_date[3:]
         now = datetime.datetime.now()
         curr_year = now.year
         if expiry_year >= curr_year:
