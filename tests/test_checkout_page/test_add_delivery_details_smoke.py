@@ -44,7 +44,7 @@ class TestAddDeliveryAddress(unittest.TestCase):
     @data(*getCSVData(data_path))
     @unpack
     @pytest.mark.usefixtures("setup", "preconditions")
-    def test_add_valid_delivery_details(self,fullAddress, Postcode, PhoneNum):
+    def test_add_valid_delivery_details(self, fullAddress, Postcode, PhoneNum):
         self.delivery_page.enter_full_delivery_details(phone=PhoneNum, postcode=Postcode, full_address=fullAddress)
         assert self.delivery_page.verify_valid_delivery_details()
         if AssertionError:
