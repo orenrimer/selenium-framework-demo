@@ -1,8 +1,7 @@
 import os
-
 import pytest
-from ddt import data, unpack
-
+import unittest
+from ddt import ddt, data, unpack
 from pages.cart_page import CartPage
 from pages.checkout_pages.delivery_page import DeliveryPage
 from pages.checkout_pages.payment_page import PaymentPage
@@ -13,15 +12,16 @@ from utilities.read_data import getCSVData
 
 
 
-pytestmark = [pytest.mark.smoke, pytest.mark.checkout]
+pytestmark = [pytest.mark.smoke, pytest.mark.checkout, pytest.mark.deliverypage]
+
 
 @ddt
-class TestPayWithCreditCard:
+class TestPayWithCreditCard(unittest.TestCase):
 
     root = os.path.dirname(os.path.dirname(__file__))
     data_path = os.path.join(root, "..", "test_data", "CCRecords.csv")
 
-    @pytest.fixture(scope="class")
+    @pytest.fixture()
     def setup(self, driver_setup):
         self.login_page = LoginPage(driver_setup)
         self.results_page = ResultsPage(driver_setup)
@@ -32,8 +32,8 @@ class TestPayWithCreditCard:
         self.product = "jeans"
 
 
-    @pytest.fixture(scope="class")
-    def prerequisites(self, setup):
+    @pytest.fixture()
+    def preconditions(self, setup):
         self.login_page.goto()
         self.login_page.login()
         self.results_page.goto_product(self.product)
@@ -46,7 +46,8 @@ class TestPayWithCreditCard:
     @data(*getCSVData(data_path))
     @unpack
     @pytest.mark.tcid30
-    def test_pay_with_valid_card(self, setup, preconditions, ccNum, ccExp, ccCVV):
+    @pytest.mark.usefixtures("setup", "preconditions")
+    def test_pay_with_valid_card(self, ccNum, ccCVV, ccExp):
         self.payment_page.place_order(payment_options="card", curd_num=ccNum,
                                       expiry_date=ccExp, cvv=ccCVV)
         assert self.payment_page.verify_successful_payment()
